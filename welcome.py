@@ -1,1 +1,1 @@
-print("hello dynamites, welcome to programming class with python")
+print("hello Es-Kay,  your class was interesting but i paid 500 because i was sleeping")
