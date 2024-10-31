@@ -1,0 +1,7 @@
+print( "patternA      patternB       patternC       patternD ")
+print( "*             ******                *        ******  ")
+print( "**             *****              **          *****  ")
+print( " ***            ****             ***           ****  ")
+print( " ****            ***            ****            ***  ")
+print( " *****            **           *****             **  ")
+print( " ******            *          ******              *  ")
