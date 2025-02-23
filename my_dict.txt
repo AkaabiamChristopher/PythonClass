@@ -1,0 +1,6 @@
+key = ["name","age","city"]
+values = ["Alice","25","New York"]
+
+for key,value in zip(keys,values):
+	my_dict[key] = value
+print(my_dict)
