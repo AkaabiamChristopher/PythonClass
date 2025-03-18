@@ -1,25 +1,34 @@
-def score_grade(**args):
-	students_list = []
-	count = 0
-	while count < 10:
-		for i in range(1,11):
-			print(f"<---Enter name of student{i}--->")
-			student = (input())
-			students_list.append(student)
-			count += 1
-	languages = ["Python", "JavaS", "DataScience", "DesignThinking"]
-	
-	
-	for i in range(0, 9):
-		for j in range(0, 4): 
-			print(f"Enter {students_list[i]} score in {languages[j]}")
-		scores = (input())
-		scores = scores.split(",")
-		students_list[i].append(scores)	
-		print(f"Enter {students_list[i]} score in {languages[j]}")
-		
-	print(students_list)
+from student import student
+
+def create_student():
+    print("Please enter your details:")
+    user_id = input("User ID: ")
+    name = input("Name: ")
+    email = input("Email: ")
+    password = input("Password: ")
+    return student(user_id, name, email, password)
 
 
+if __name__ == "__main__":
+    student = create_student()
+    print("\nStudent created successfully!")
+    print(f"Name: {student.name}")
+    print(f"Email: {student.email}")
 
-score_grade()
+    while True:
+        print("\nOptions:")
+        print("1. Enroll in a course")
+        print("2. View enrolled courses")
+        print("3. Exit")
+        choice = input("Enter your choice: ")
+
+        if choice == "1":
+            course = input("Enter the course name to enroll: ")
+            student.enroll_in_course(course)
+        elif choice == "2":
+            print("Enrolled Courses:", student.view_courses())
+        elif choice == "3":
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice. Please try again.")
